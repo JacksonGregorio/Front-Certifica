@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Header from '@/components/headers'
 import Footer from '@/components/footers'
 import LoginSignForm from '@/components/login'
+import '@/app/globals.css'
 
 export default function Home() {
   return (
