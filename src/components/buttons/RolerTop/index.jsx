@@ -7,7 +7,7 @@ const ScrollToTopButton = () => {
   };
 
   return (
-    <div class="fixed top-1 right-0 p-4 bg-gray-800 text-white rounded-full shadow">
+    <div className="fixed top-1 right-0 p-2 bg-gray-800 text-white rounded-full shadow">
     <button
       className="items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
       onClick={handleScrollToTop}

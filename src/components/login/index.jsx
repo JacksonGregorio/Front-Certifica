@@ -1,66 +1,42 @@
 "use client"
 import React from 'react';
-import ColorButtonIndigo from '../buttons/ColorButtonIndigo';
-import TitleBlack from '../texts/titleBlack';
+import Image from 'next/image';
+import  Link  from 'next/link';
 
 export default function LoginSignForm(){
     return (
-        <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <TitleBlack title="Sign in to your account"/>
+      <div class="flex h-100">
+        <div class="hidden lg:flex items-center justify-center flex-1 bg-white text-black">
+          <div class="max-w-md text-center">
+           <Image src="/next.svg" width={500} height={500}/>
+          </div>
         </div>
-
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                Email address
-              </label>
-              <div className="mt-2">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
+        <div class="w-full bg-gray-100 lg:w-1/2 flex items-center justify-center">
+          <div class="max-w-md w-full p-6">
+            <h1 class="text-3xl font-semibold mb-6 text-black text-center">Sign Up</h1>
+            <h1 class="text-sm font-semibold mb-6 text-gray-500 text-center">Join to Our Community with all time access and free </h1>
+            <form action="#" method="POST" class="space-y-4">
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="text" id="email" name="email" class="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"></input>
               </div>
-            </div>
-
-            <div>
-              <div className="flex items-center justify-between">
-                <label htmlFor="password" className="block text-sm font-medium leading-6 text-gray-900">
-                  Password
-                </label>
-                <div className="text-sm">
-                  <a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-                    Forgot password?
-                  </a>
-                </div>
+              <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" class="mt-1 p-2 w-full border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300 transition-colors duration-300"></input>
               </div>
-              <div className="mt-2">
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
+              <div>
+              <Link href="/userview">
+                <button type="submit" class="w-full bg-black text-white p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300">
+                Sign Up
+                </button>
+              </Link>
               </div>
+            </form>
+            <div class="mt-4 text-sm text-gray-600 text-center">
+              <p>Already dontn have an account? <a href="#" class="text-black hover:underline">Create here</a>
+              </p>
             </div>
-            <div>
-            <ColorButtonIndigo text="Sign in"/>
-            </div>
-          </form>
-
-          <p className="mt-10 text-center text-sm text-gray-500">
-            Not a user?{' '}
-            <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Start now
-            </a>
-          </p>
+          </div>
         </div>
       </div>
     );
